@@ -1,7 +1,13 @@
 # React Pokemon Code Along
 
-## Getting strated
-Remember to npm install
+## Getting started
+To run this code:
+
+npm i
+
+npm run dev
+
+## Starting from scratch
 This code is complete. Create a new Vite Project and follow the steps below to code as you go.
 
 -Create Vite App
