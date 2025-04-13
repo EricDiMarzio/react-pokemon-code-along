@@ -46,6 +46,8 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
   border-color: white;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 .app {
@@ -84,4 +86,8 @@ button {
   position: absolute;
   right: 1rem;
   top: 1rem;
+}
+
+.noClick {
+  pointer-events: none;
 }

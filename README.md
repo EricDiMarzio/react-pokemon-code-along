@@ -1,44 +1,78 @@
 # React Pokemon Code Along
 
-## Getting started
+## Getting Started
 To run this code:
 
-npm i
+1. Install dependencies:
+   ```bash
+   npm i
+   ```
 
-npm run dev
+2. Start the development server:
+   ```bash
+   npm run dev
+   ```
 
-## Starting from scratch
-This code is complete. Create a new Vite Project and follow the steps below to code as you go.
+You can also view the completed application here:  
+[React Pokemon Tutorial](https://react-pokemon-tutorial.netlify.app/)
 
--Create Vite App
+---
 
--npm i
+## Starting from Scratch
+This code is complete. To create a new Vite project and follow along, use the steps below:
 
--package.json - view scripts
+### Initial Setup
+1. **Create a Vite App**  
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+3. **View scripts in `package.json`** to understand how to run the template app.
 
--Empty App.jsx, App.css, index.css
+4. **Prepare files**:
+   - Empty `App.jsx`, `App.css`, and `index.css`.
+   - Copy the completed `index.css` from this repository and ensure it's connected to your `main.jsx`.
 
--Copy completed index.css from this repo
+### Building the Application
+1. **Create the `App` component**  
+   - Use the RFC snippet from the React Snippets VS Code extension (optional).
 
--create App component
+2. **Create a static `Card` component**  
+   - Populate the `App` component with a couple of static `<Card>` components.
 
--use RFC snippet from React extension?
+3. **Fetch Data**  
+   - Create a function called `fetchData()` to perform a fetch request to a static URL.  
+     Example: `https://pokeapi.co/api/v2/pokemon/25`
 
--create static Card component
+4. **Parse Data**  
+   - Extract the following from the API response:
+     - `data.name`
+     - `data.sprite`
+     - `data.id`
 
--Populate App with a couple <Card> components
+5. **Manage State**  
+   - Use `useState` to create a `team` array.
 
--Perform fetch request to static URL
+6. **Fetch Random Pokemon**  
+   - For each fetch request, search using a random index (1–151 for Generation 1 Pokémon) and append the new data to the `team` array.
 
--parse data....data.name, data.sprite, data.id
+7. **Render Cards Dynamically**  
+   - Use `team.map()` to display a unique `Card` for each Pokémon in the `team`.  
+     - Pass a unique value for each `key`.  
+     - Pass the Pokémon data into the `Card` component.
 
--Create team array with useState
+8. **Dynamic Card Rendering**  
+   - Ensure the `Card` component renders dynamic data.
 
--have each fetch request search using a random index (1-151 for generation 1 pokemon) and append the new data onto the end of team
+9. **Add Buttons**  
+   - **Fetch Button**: Fetches a new Pokémon and adds it to the team.  
+   - **Clear Button**: Resets the `team` array to empty.
 
--Use team.map() to display a unique Card for each pokemon in 'team'. You'll need to pass in a unique value for eahc 'key' and you'll need to pass the element itself into the Card component.
+---
 
--Have the card componenet render dynamic data.
+## Stretch Goals
+1. **Disable Fetch Button**  
+   - Make the "Fetch" button disappear once the team has 6 Pokémon.
 
--Add "Clear" button which resets team to an empty array.
-
+2. **Disable Clear Button**  
+   - Prevent the "Clear" button from working until the team has 6 Pokémon.

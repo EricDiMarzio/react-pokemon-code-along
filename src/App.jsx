@@ -26,6 +26,7 @@ function App() {
     }
   }
 
+
   return (
     <div className="app">
       <h1>Build your Team!</h1>
@@ -33,8 +34,8 @@ function App() {
         {team.map((el) => (<Card key={el.id} pokemon={el} />))}
       </div>
       <div style={{ display: 'flex', gap: '1rem' }}>
-        <button onClick={() => {fetchData(BASE_URL);}}>Fetch</button>
-        <button onClick={() => {setTeam([]);}}>Clear</button>
+       {team.length < 6 && <button  onClick={() => {fetchData(BASE_URL);}}>Fetch</button> } 
+        <button className={team.length < 6 && 'noClick'} onClick={() => {setTeam([]);}}>Clear</button>
       </div>
     </div>
   );
