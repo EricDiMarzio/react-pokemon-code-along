@@ -42,6 +42,7 @@ This code is complete. To create a new Vite project and follow along, use the st
 
 3. **Fetch Data**  
    - Create a function called `fetchData()` to perform a fetch request to a static URL.  
+   - `https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch`
      Example: `https://pokeapi.co/api/v2/pokemon/25`
 
 4. **Parse Data**  
